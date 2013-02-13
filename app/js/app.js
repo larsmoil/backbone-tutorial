@@ -5,13 +5,18 @@
  * Time: 12:54 AM
  * To change this template use File | Settings | File Templates.
  */
-define([], function() {
-    var App = function() {
 
+define([
+    'gapi'
+], function(ApiManager) {
+    var App = function() {
+        this.connectGapi();
     };
 
     App.prototype = {
-
+        connectGapi: function() {
+            this.apiManager = new ApiManager();
+        }
     };
 
     return App;
