@@ -13,3 +13,7 @@ define([], function() {
     config.clientId = 'your client id';
     return config;
 });
+
+_.templateSettings = {
+    interpolate: /\{\{(.+?)\}\}/g
+};
